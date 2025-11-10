@@ -1,6 +1,4 @@
-// -*- coding: utf‑8 -*-
-// Chương trình “Vòng Xoay Kinh Dịch” – phong cách huyền học, Âm‑Dương, Thiên‑Địa‑Nhân  
-// Ngôn ngữ: C++11 trở lên  
+  
 #include <iostream>
 #include <string>
 #include <vector>
