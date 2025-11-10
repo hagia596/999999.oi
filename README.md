@@ -61,17 +61,12 @@
     </style>
   </head>
   <body>
-
 <h1>⚛️ VÒNG XOAY KINH DỊCH ⚛️<br><small>Thiên – Địa – Nhân – Âm – Dương</small></h1>
-
 <div id="vong" class="vong-xoay">Âm – Dương</div>
-
 <button id="xoay" class="nut">Xoay Vòng</button>
-
 <div class="ketqua" id="ketqua">
     <div class="tenque">Hãy xoay để xem quẻ...</div>
 </div>
-
 <script>
 // Danh sách 64 quẻ (rút gọn còn 10 quẻ làm mẫu, có thể mở rộng đủ 64)
 const dsQue = [
@@ -85,26 +80,21 @@ const dsQue = [
     {ten:"否 Pǐ (Bĩ)", bieuHao:"☰ ☷ ☷", loiGiai:"Quẻ Bĩ thời thế nghịch, Dương bị Âm che, cần giữ chí hướng."},
     {ten:"同人 Tóng Rén (Đồng Nhân)", bieuHao:"☰ ☷ ☰", loiGiai:"Quẻ Đồng Nhân nhân bản tương giao, người hợp tác tạo nên vũ khí chí thiện."},
     {ten:"大有 Dà Yǒu (Đại Hữu)", bieuHao:"☰ ☰ ☷", loiGiai:"Quẻ Đại Hữu thịnh vượng, tích hoạch thành quả, nhưng cần khiêm nhường."}];
-
 const vong = document.getElementById("vong");
 const nut = document.getElementById("xoay");
 const ketqua = document.getElementById("ketqua");
-
 nut.addEventListener("click", () => {
     // Tạo hiệu ứng xoay vòng
     const goc = 360 * 3 + Math.floor(Math.random() * 360);
     vong.style.transform = `rotate(${goc}deg)`;
-
-    // Sau khi xoay xong, hiển thị quẻ
+ // Sau khi xoay xong, hiển thị quẻ
     setTimeout(() => {
         const idx = Math.floor(Math.random() * dsQue.length);
         const q = dsQue[idx];
         ketqua.innerHTML = `
             <div class="tenque">${q.ten}</div>
             <div class="bieuhao">${q.bieuHao}</div>
-            <div class="loigiai">${q.loiGiai}</div>
-        `;
-    }, 2000);});
+            <div class="loigiai">${q.loiGiai}</div>`;}, 2000);});
 </script>
 </body>
 </html>
